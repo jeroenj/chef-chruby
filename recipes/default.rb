@@ -20,13 +20,16 @@ include_recipe "ark"
 
 ark "chruby" do
   url node["chruby"]["url"]
+  extension "tar.gz"
+  checksum node["chruby"]["checksum"]
+  version node["chruby"]["version"]
   action :install_with_make
 end
 
 # Workaround for Github issue 5 https://github.com/Atalanta/chef-chruby/issues/5
 
 link "/usr/local/chruby" do
-  to "/usr/local/chruby-1"
+  to "/usr/local/chruby-#{node["chruby"]["version"]}"
 end
 
 sh_owner = node['chruby']['sh_owner']

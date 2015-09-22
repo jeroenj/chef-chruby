@@ -1,4 +1,5 @@
 default['chruby']['version'] = '0.3.9'
+default['chruby']['checksum'] = '7220a96e355b8a613929881c091ca85ec809153988d7d691299e0a16806b42fd'
 default['chruby']['gpg_check'] = false
 default['chruby']['use_rvm_rubies'] = false
 default['chruby']['use_rbenv_rubies'] = false
