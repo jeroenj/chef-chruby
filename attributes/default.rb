@@ -8,3 +8,4 @@ default['chruby']['default'] = 'embedded'
 default['chruby']['user_rubies'] = []
 default['chruby']['sh_dir'] = "/etc/profile.d"
 default['chruby']['sh_name'] = 'chruby.sh'
+default['chruby']['url'] = "https://github.com/postmodern/chruby/archive/v#{node['chruby']['version']}.tar.gz"
